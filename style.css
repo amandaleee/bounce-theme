@@ -1,6 +1,5 @@
 /*
 Theme Name: Postcarding2
-
 */
 
 body, html {
@@ -13,11 +12,15 @@ body, html {
   -moz-transition: opacity 400ms;
   transition: opacity 400ms;
   font-size: 100%;
+  position: relative;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   background-color: #014466;
   background: url(postcarding-background-april.jpg) no-repeat;
   background-size: cover;
+  min-height: 100%;
+  font-family: 'Noto Serif', serif;
+  color: #fff;
 }
 
 .stage {
@@ -27,6 +30,7 @@ body, html {
   background: url(postcard-background-repeating-april.png) repeat;
   background-size: 500px; 
 }
+
 .clearfix {
   *zoom: 1;
 }
@@ -42,52 +46,22 @@ body, html {
   clear: both;
 }
 
-html {
-  min-height: 100%;
-}
-
-body {
-  padding: 0;
-  position: relative;
-  margin: 0;
-  min-height: 100%;
-  font-family: 'Noto Serif', serif;
-  color: #fff;
-}
-
-.container { 
-  width: 100%;
-  padding: 0;
-}
-
 h1 { 
   color: #fff;
   font-size: 1.7em; 
   font-weight: 300; 
   font-family: 'Noto Serif', serif;
 }
-p.smaller {
-  font-size: .75em;
-}
-
-.main  {
-  margin: 25px auto;
-  max-width: 980px;
-}
-
-.main p {
+p {
   color: #000;
   text-align: left;
   font-size: 18px;
   line-height: 180%;
   font-weight: 100;
 }
-
-.nav-top a {
-  color: #000;
+p.smaller {
+  font-size: .75em;
 }
-
-
 
 .addressform {
   display: block;
@@ -107,18 +81,20 @@ p.smaller {
 }
 
 ::-webkit-input-placeholder {
-    color: #000;
+    color: #777;
 }
 :-moz-placeholder {
-    color: #000;
+    color: #777;
 }
 ::-moz-placeholder {
-    color: #000;
+    color: #777;
 }
 :-ms-input-placeholder {
-    color:  #000;
+    color:  #777;
 }
-form { margin-top: 1em;}
+form { 
+  margin-top: 1em;
+}
 .addressform input[type="submit"] {
   font-family: 'Noto Serif', serif;
   border:1px solid #fff;
@@ -131,20 +107,6 @@ form { margin-top: 1em;}
   display: none;
 }
 
-footer {
-  position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    color: #fff;
-}
-
-footer a, footer a:hover, footer a:active, footer a:visited {
-  color: #fff;
-  padding: 1em;
-  text-decoration: none;
-  font-family: 'Noto Serif', serif;
-}
 
 @media all and (max-width:768px) {
 form input { margin-bottom: 0px!important;}
@@ -153,12 +115,22 @@ form input { margin-bottom: 0px!important;}
 @media all and (min-width: 768px) {
   /* travel - left to right */
   @-webkit-keyframes travel {
-    from {  left: 0;   }
-    to   { left:100vw; transform: translateX(-100%);}
+    from {  
+      left: 0;   
+    }
+    to   { 
+      left: 100vw; 
+      transform: translateX(-100%);
+    }
   }
   @keyframes travel {
-    from { left: 0;       }
-    to   { left: 100vw; transform: translateX(-100%); }
+    from { 
+      left: 0;       
+    }
+    to   { 
+      left: 100vw; 
+      transform: translateX(-100%); 
+    }
   }
   /* bounce - top to bottom */
   @-webkit-keyframes bounce {
@@ -206,14 +178,11 @@ form input { margin-bottom: 0px!important;}
     position: absolute;
     width: 320px;
     height: auto;
-
     -webkit-animation-name: bounce;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 27.2s;
-
     animation-name: bounce;
     animation-iteration-count: infinite;
     animation-duration: 27.2s;
   }
-
 }
